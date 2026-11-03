@@ -1,0 +1,18 @@
+SISTEMA DE CONTROL DOCUMENTAL EHS — PROTOTIPO
+
+1. Extrae el archivo ZIP.
+2. Abre revisor_documental.html en Google Chrome o Microsoft Edge.
+3. Selecciona una carpeta principal con sus subcarpetas.
+4. Pulsa Analizar documentos y revisa resultados.
+5. Exporta el reporte en CSV si lo necesitas.
+
+Formatos admitidos: PDF, DOCX, JPG, JPEG, PNG y WEBP.
+Se necesita conexión a Internet para cargar las bibliotecas de lectura y OCR.
+
+LIMITACIONES IMPORTANTES:
+- Esta versión registra resultados por ARCHIVO, no separa múltiples personas contenidas dentro del mismo PDF.
+- Las fechas detectadas automáticamente requieren comprobación humana.
+- PDFs de más de 40 páginas se leen solo hasta la página 40.
+- Los Word antiguos .DOC no están admitidos en este prototipo.
+- No verifica la autenticidad de documentos ni consulta registros oficiales.
+- No cargues documentación personal sensible si no has validado la seguridad del entorno y las políticas aplicables.
