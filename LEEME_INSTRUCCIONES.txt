@@ -1,0 +1,54 @@
+CONTROL DOCUMENTAL EHS ECUADOR — VERSIÓN 2 (PRUEBA)
+=================================================
+
+1) EXTRAER el ZIP (no subir el ZIP directamente a GitHub Pages).
+2) Para uso local: abrir index.html en Chrome o Edge con conexión a internet.
+3) Para GitHub Pages: subir index.html al nivel raíz del repositorio (NO dentro de una subcarpeta); ir a Settings > Pages > Deploy from a branch > main > /(root) > Save. El archivo debe llamarse exactamente index.html.
+4) Organizar la carpeta en subcarpetas por empresa, por ejemplo:
+   Contratistas/
+      EMPRESA_ABC/
+         Personal/
+            AptitudMedica_Juan.pdf
+            Afiliacion_Juan.pdf
+            Certificado_Alturas_Juan.pdf
+         Empresa/
+            MoraPatronal.pdf
+            MatrizDeRiesgos.pdf
+            MatrizAspectosEImpactos.pdf
+            PlanPrevencion.pdf (de 1 a 10 trabajadores)
+            ReglamentoHigieneSeguridad.pdf (más de 10 trabajadores)
+         Actas/
+            EntregaEPP_Juan.pdf
+      EMPRESA_XYZ/
+         ...
+5) Pulsar Seleccionar carpeta; indicar el rango de trabajadores de CADA empresa; ajustar la fecha de auditoría y plazos de política y pulsar Analizar carpeta.
+6) Revisar las tres vistas: Requisitos consolidados / Archivos analizados / Personas encontradas.
+7) Exportar CSV (se abre con Excel; separador punto y coma).
+
+REGLAS IMPLEMENTADAS:
+- Aptitud médica: 12 meses desde fecha de examen/emisión como regla configurable, o fecha de expiración explícita.
+- Capacitaciones y certificados: 24 meses como política interna, o fecha expresa.
+- Afiliación IESS: antigüedad máxima de 30 días, POLÍTICA INTERNA, no obligación legal universal de renovar certificado todos los meses.
+- Mora patronal: certificado IESS de obligaciones patronales, 30 días desde emisión (IESS).
+- Matriz de riesgos: existencia y elementos textuales de peligro/riesgo, valoración, control (sin caducidad ficticia).
+- Matriz aspectos e impactos ambientales: existencia y elementos textuales de aspectos, impactos y valoración (sin caducidad ficticia).
+- 1–10 trabajadores: plan de prevención de riesgos laborales, referencia de 12 meses desde emisión/aprobación; requiere verificar registro/autenticidad SUT.
+- Más de 10: reglamento de higiene y seguridad, referencia de 24 meses desde aprobación/emisión; requiere verificar registro/autenticidad SUT.
+- Acta EPP: existencia, constancia textual de entrega, identificación de equipos y firma/constancia (no comprueba firma real).
+
+LIMITACIONES IMPORTANTES:
+- Es un prototipo de análisis documental LOCAL; no se conecta a SUT/IESS ni comprueba documentos genuinos, QR o firmas digitales.
+- PDF escaneado y fotografías dependen del OCR; documentos borrosos o tablas complejas pueden generar errores.
+- Varias personas en una misma página: no asigna indiscriminadamente fechas o firmas; muestra evidencia insuficiente. Para fiabilidad usar certificados individuales por página con nombre y cédula.
+- Si no encuentra fecha de origen confiable no fabrica un vencimiento: describe evidencia faltante.
+- No admite archivos .DOC antiguos (guardar como .DOCX) ni archivos PDF protegidos por contraseña.
+- El sistema solo analiza los primeros 150 folios de un PDF muy largo.
+- En las matrices la presencia de palabras clave NO garantiza que la evaluación de riesgos sea adecuada o técnicamente correcta.
+- Los archivos son procesados localmente en el navegador; se descargan bibliotecas JavaScript de terceros por internet. No usar con datos médicos personales en equipos públicos o sitios no autorizados sin evaluación de privacidad/seguridad empresarial.
+
+FUENTES OFICIALES:
+https://www.iess.gob.ec/es/web/empleador/certificado-de-obligaciones-patronales
+https://www.trabajo.gob.ec/registro-de-obligaciones-en-materia-de-seguridad-y-salud-en-la-plataforma-sut/
+https://www.trabajo.gob.ec/wp-content/uploads/2024/10/ACUERDO-MINISTERIAL-NRO.-MDT-2024-196-signed.pdf
+
+NOTA: esta versión implementa reglas parametrizadas y detección heurística; antes de usar como mecanismo de autorización de acceso debe validarse con casos reales y pruebas de precisión.
